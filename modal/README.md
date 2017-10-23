@@ -38,7 +38,7 @@
 | config      | object |Y        |组件可配置参数   |           |
 | configType  | number |N        |初始化类型       |0，1，2    |
 
-  - configType有效值说明  
+- configType有效值说明  
 | 值 |描述                                 |
 |:--:|:---------------------------------- |
 | 0  | 仅在第一次show的时候初始化（default） |
