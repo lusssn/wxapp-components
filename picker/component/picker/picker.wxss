@@ -1,0 +1,62 @@
+/* root font */
+/* color system */
+/* semantic */
+/* line 5, picker.scss */
+.picker {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+}
+/* line 8, picker.scss */
+.picker_mask {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+/* line 13, picker.scss */
+.picker .head {
+  font-size: 17px;
+  color: #5F5F5F;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+}
+/* line 21, picker.scss */
+.picker .btn {
+  padding: 13px 15px;
+}
+/* line 24, picker.scss */
+.picker .back {
+  color: #A0A0A0;
+}
+/* line 27, picker.scss */
+.picker .confirm {
+  color: #477DB2;
+}
+/* line 30, picker.scss */
+.picker_content {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+}
+/* line 35, picker.scss */
+.picker_frame {
+  height: 42px;
+  font-size: 10px;
+}
+/* line 39, picker.scss */
+.picker_view {
+  font-size: 20px;
+  color: #212121;
+  line-height: 42px;
+  text-align: center;
+}
