@@ -1,7 +1,8 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/modal/modal"
+    "pages/modal/modal",
+    "pages/uploader/uploader"
   ],
   "window":{
     "backgroundTextStyle":"light",

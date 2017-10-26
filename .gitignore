@@ -1,2 +1,4 @@
 # phpstrom cache directory
 .idea
+# Weixin DevTools config file
+project.config.json

@@ -1,0 +1,14 @@
+<template name="uploader">
+    <view class="uploader">
+        <view class="photo_group" bindtap="previewUploaderImg">
+            <image wx:for="{{uploader.files}}" wx:for-item="imgUrl" wx:key="{{index}}"
+                   data-ii="{{index}}" class="photo" src="{{imgUrl}}" mode="aspectFill">
+                <view class="link_delete" data-ii="{{index}}" catchtap="deleteUploaderImg"><icon class="icon_close"/></view>
+            </image>
+            <view hidden="{{uploader.limit && uploader.files.length >= uploader.limit}}" class="photo link_add" catchtap="addUploaderImg">
+                <icon class="icon_add"/>
+                添加图像
+            </view>
+        </view>
+    </view>
+</template>
