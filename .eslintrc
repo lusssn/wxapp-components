@@ -1,0 +1,14 @@
+{
+  "extends": [
+    "standard"
+  ],
+  "globals": {
+    "wx": false,
+    "getApp": false,
+    "Page": false,
+    "App": false
+  },
+  "rules": {
+    "no-extend-native": 0
+  }
+}
