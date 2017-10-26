@@ -1,4 +1,8 @@
 <!--index.wxml-->
+<import src="../../component/picker/picker.wxml"/>
+
 <view class="container">
-  <button type="primary" bindtap="toShowModal">Modal</button>
+  <button type="primary" plain="true" bindtap="toShowModal">Modal</button>
+  <button type="primary" plain="true" bindtap="bindShowPicker">Picker</button>
 </view>
+<template wx:if="{{picker}}" is="picker" data="{{...picker}}"/>
