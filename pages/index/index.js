@@ -14,7 +14,7 @@ Page({
   },
   toModal () {
     wx.navigateTo({
-      url: '../../pages/modal/modal'
+      url: '../../pages/egModal/egModal'
     })
   },
   bindShowPicker () {
@@ -22,7 +22,7 @@ Page({
   },
   toUploder () {
     wx.navigateTo({
-      url: '../../pages/uploader/uploader'
+      url: '../../pages/egUploader/egUploader'
     })
   }
 })

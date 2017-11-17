@@ -1,0 +1,60 @@
+@import "../../scss/_variables";
+@import "../../scss/_mixins";
+@import "../../scss/_border";
+
+.modal {
+	@include bfc(fixed, null);
+
+	z-index: 10;
+	text-align: center;
+	.modal_mask {
+		@include bfc($top: null);
+
+		background-color: rgba(black, .5);
+	}
+	.modal_view {
+		position: relative;
+		overflow: hidden;
+		width: 280px;
+		margin: 45% auto 0;
+		padding-top: 30px;
+		border-radius: 8px;
+		background-color: white;
+	}
+	.modal_title {
+		@include font(18px, black);
+
+		margin-top: -10px;
+		padding-bottom: 10px;
+	}
+	.modal_content {
+		@include font(16px, $text-color, 22px);
+
+		padding: 0 35px 20px;
+		.link_color {
+			color: $link-color;
+		}
+	}
+	.modal_btns {
+		@include borderPoint5("t");
+
+		display: flex;
+		font-size: 18px;
+		line-height: 25px;
+	}
+	.modal_btn {
+		flex: 1;
+		padding: 12px 0 13px;
+		&:active {
+			background-color: rgba(black, .1);
+		}
+		&.confirm {
+			color: $theme-color;
+		}
+		&.cancel {
+			@include borderPoint5("r");
+
+			color: $gray-a0;
+		}
+	}
+}

@@ -1,0 +1,57 @@
+@charset "UTF-8";
+@import "../../scss/_variables";
+@import "../../scss/_mixins";
+@import "../../scss/_svg";
+@import "../../scss/_functions";
+
+.uploader {
+	padding: 0 15px;
+	.photo_group {
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: -5px;
+	}
+	.photo {
+		position: relative;
+		width: rpx(100);
+		height: rpx(65);
+		margin-right: rpx(10);
+		margin-bottom: 10px;
+		background-color: $bg-color;
+		&:nth-of-type(3n), &:last-child {
+			margin-right: 0;
+		}
+	}
+	// 删除图片的x
+	.link_delete {
+		@include bfc(absolute, 0, 0);
+
+		padding-bottom: 8px;
+		padding-left: 8px;
+		font-size: 0;
+	}
+	.icon_close {
+		@include svg("close", 16px, $gray-a0);
+
+		border-bottom-left-radius: 3px;
+		background-color: rgba(white, .85);
+	}
+	// 添加图片的+
+	.link_add {
+		@include font(rpx(12), $gray-a0, rpx(17));
+
+		box-sizing: border-box;
+		text-align: center;
+		border: 1px solid $line-color;
+
+		&:active {
+			opacity: .6;
+		}
+		.icon_add {
+			@include svg("plus", $gray-a0);
+
+			display: block;
+			margin: rpx(15) auto rpx(2);
+		}
+	}
+}

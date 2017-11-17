@@ -1,7 +1,9 @@
-/**app.wxss**/
+/* line 1, app.scss */
 .container {
-	padding: 20px;
+  padding: 20px;
 }
+
+/* line 4, app.scss */
 button {
-	margin-bottom: 20px;
+  margin-bottom: 20px;
 }

@@ -1,8 +1,8 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/modal/modal",
-    "pages/uploader/uploader"
+    "pages/egModal/egModal",
+    "pages/egUploader/egUploader"
   ],
   "window":{
     "backgroundTextStyle":"light",

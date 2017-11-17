@@ -1,0 +1,18 @@
+@charset "UTF-8";
+/* color system */
+// gray 灰
+$gray-21: #212121;
+$gray-5f: #D7D7D7;
+$gray-d7: #D7D7D7;
+$gray-a0: #A0A0A0;
+$gray-fa: #FAFAFA;
+// red 红
+$red-01: #EF4945;
+// blue 蓝
+$blue-01: #477DB2;
+/* semantic */
+$text-color: $gray-21;
+$line-color: $gray-d7;
+$bg-color: $gray-fa;
+$link-color: $blue-01;
+$theme-color: $red-01;
