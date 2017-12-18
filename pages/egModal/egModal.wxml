@@ -1,4 +1,4 @@
-<import src="../../component/modal/modal.wxml"/>
+<import src="../../components/modal/modal.wxml"/>
 <view class="container">
     <button type="primary" bindtap="bindModalTitle">有title的弹窗</button>
     <button type="primary" bindtap="bindModalHighlight">文字高亮的弹窗</button>

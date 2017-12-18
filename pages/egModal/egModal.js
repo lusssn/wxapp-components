@@ -1,4 +1,4 @@
-import Modal from '../../component/modal/modal'
+import Modal from '../../components/modal/modal'
 
 Page({
   bindModalTitle () {
@@ -13,17 +13,17 @@ Page({
       cancel: function () {
         // 取消回调
       }
-    }, 2)
+    }, 'content')
   },
   bindModalHighlight () {
     Modal.show(this, {
-      content: ['确认删除','10086','吗？'],
+      content: ['确认删除', '10086', '吗？'],
       cancelText: '取消',
       confirmText: '是的',
       confirm: function () {
         // 确定回调
       }
-    }, 2)
+    }, 'content')
   },
   bindModalOneButton () {
     Modal.show(this, {
@@ -32,6 +32,6 @@ Page({
       confirm: function () {
         // 确定回调
       }
-    }, 2)
+    }, 'content')
   }
 })

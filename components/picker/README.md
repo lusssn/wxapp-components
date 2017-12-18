@@ -4,19 +4,19 @@
 ### 一、用法
 1. 在wxml中引入模板
    ``` html
-   <import src="../../component/picker/picker.wxml"/>
+   <import src="../../components/picker/picker.wxml"/>
    <!-- 必须添加 wx:if 的判断，data参数必须为...picker -->
    <template wx:if="{{picker}}" is="picker" data="{{...picker}}"/>
    ```
 
 2. 在wxss中引入样式
    ```scss
-   @import '../../component/picker/picker.wxss';
+   @import '../../components/picker/picker.wxss';
    ```
 
 3. 在js中引入和使用
     ```javascript
-    import Picker from '../../component/picker/picker'
+    import Picker from '../../components/picker/picker'
     const picker = new Picker(this)
     picker.init({
        title: '身份证对应身份',

@@ -1,11 +1,11 @@
 'use strict'
-// 1. 仅在第一次show的时候初始化（default）
-// const TYPE_JUST_ONCE = 0
-// 2. 第一次show初始化全部，之后只初始化内容
-const TYPE_JUST_CONTENT = 1
-// 3. 每一次show都初始化全部
-const TYPE_EVERY_TIME = 2
-
+/**
+ * configType有效值：all（default），content，event，once
+ * 1. all：默认值，每一次show都更新内容和事件
+ * 2. content：第一次show初始化全部，之后只更新内容
+ * 3. event：第一次show初始化全部，之后只更新事件
+ * 4. once：仅在第一次show初始化全部
+ */
 let CONFIG = {}
 let CONFIRM_CALLBACK
 let CANCEL_CALLBACK
@@ -23,15 +23,6 @@ const isEmptyObj = (obj) => {
   }
   return true
 }
-/*
- * 隐藏模态框
- * @scope page
- */
-const _hide = function () {
-  this.setData({
-    'modal.hide': true
-  })
-}
 
 export default class Modal {
   /*
@@ -39,50 +30,76 @@ export default class Modal {
    * @scope page
    * @param config
    */
-  static show (scope, config, configType = 0) {
+  static show (scope, config, configType = 'all') {
     if (!scope || !scope.onLoad) {
       return
     }
-
-    if (isEmptyObj(scope.data.modal) || configType === TYPE_EVERY_TIME) {
-      CONFIG = {
-        title: config.title,
-        content: [],
-        cancelText: config.cancelText,
-        confirmText: config.confirmText,
-        hide: false
-      }
-
-      if (Array.isArray(config.content)) {
-        CONFIG.content = config.content
-      } else {
-        CONFIG.content.push(config.content)
-      }
-
-      CONFIRM_CALLBACK = config.confirm
-      CANCEL_CALLBACK = config.cancel
-
-      scope.modalControl = function (e) {
-        const key = e.target.id
-        if (key === 'modal_confirm') {
-          typeof CONFIRM_CALLBACK === 'function' && CONFIRM_CALLBACK()
-        } else if (key === 'modal_cancel') {
-          typeof CANCEL_CALLBACK === 'function' && CANCEL_CALLBACK()
-        }
-        _hide.call(scope)
-      }
-      scope.setData({
-        modal: CONFIG
-      })
-    } else if (configType === TYPE_JUST_CONTENT) {
+    // 1. 第一次或者类型是all
+    if (isEmptyObj(scope.data.modal) || configType === 'all') {
+      _initModal(scope, config)
+      return
+    }
+    // 2. 仅更新内容
+    if (configType === 'content') {
       scope.setData({
         'modal.content': Array.isArray(config.content) ? config.content : [config.content],
         'modal.hide': false
       })
-    } else {
-      scope.setData({
-        'modal.hide': false
-      })
+      return
     }
+    // 3. 仅更新事件
+    if (configType === 'event') {
+      _setEvent(config)
+    }
+    // 4. once模式
+    scope.setData({
+      'modal.hide': false
+    })
   }
+}
+
+function _initModal (scope, config) {
+  CONFIG = {
+    title: config.title,
+    content: [],
+    cancelText: config.cancelText,
+    confirmText: config.confirmText,
+    hide: false
+  }
+
+  if (Array.isArray(config.content)) {
+    CONFIG.content = config.content
+  } else {
+    CONFIG.content.push(config.content)
+  }
+
+  _setEvent(config)
+
+  scope.modalControl = function (e) {
+    const key = e.target.id
+    if (key === 'modal_confirm') {
+      typeof CONFIRM_CALLBACK === 'function' && CONFIRM_CALLBACK()
+    } else if (key === 'modal_cancel') {
+      typeof CANCEL_CALLBACK === 'function' && CANCEL_CALLBACK()
+    }
+    _hide.call(scope)
+  }
+  scope.setData({
+    modal: CONFIG
+  })
+}
+
+function _setEvent (config) {
+  CONFIRM_CALLBACK = config.confirm
+  CANCEL_CALLBACK = config.cancel
+}
+
+/*
+ * 隐藏模态框
+ * @scope page
+ */
+function _hide () {
+  this.setData({
+    'modal.hide': true
+  })
 }

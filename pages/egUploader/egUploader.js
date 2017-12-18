@@ -1,4 +1,4 @@
-import Uploader from '../../component/uploader/uploader'
+import Uploader from '../../components/uploader/uploader'
 
 Page({
   onLoad () {

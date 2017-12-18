@@ -1,10 +1,10 @@
 ## 自定义弹窗组件说明
-更新时间：2017-10-23
+更新时间：2017-12-18
 
 ### 一、用法
 1. 在wxml中引入模板
     ```html
-    <import src="../../component/modal/modal.wxml"/>
+    <import src="../../components/modal/modal.wxml"/>
     <!-- * 建议放在文件末端 -->
     <template wx:if="{{modal}}" is="modal" data="{{...modal}}"/>
     ```
@@ -12,12 +12,12 @@
 2. 在wxss中引入样式
     若多处使用建议在app.wxss中引入
     ```scss
-    @import '../../component/modal/modal.wxss';
+    @import '../../components/modal/modal.wxss';
     ```
 
 3. 在js中引入和使用
     ```javascript
-    import Modal from '../../component/modal/modal'
+    import Modal from '../../components/modal/modal'
     Modal.show(self, {
         content: '是否删除？',
         cancelText: '取消',
@@ -36,15 +36,16 @@
 |:----------- |:------ |:-------:|:-------------- |:-------- |
 | scope       | object |Y        |Page作用域      |           |
 | config      | object |Y        |组件可配置参数   |           |
-| configType  | number |N        |初始化类型       |0，1，2    |
+| configType  | string |N        |初始化类型       |all（default），content，event，once    |
 
 - configType有效值说明  
 
-| 值 |描述                                 |
-|:--:|:---------------------------------- |
-| 0  | 仅在第一次show的时候初始化（default） |
-| 1  | 第一次show初始化全部，之后只初始化内容 |
-| 2  | 每一次show都初始化全部               |
+| 值 |描述                                     |
+|:--------:|:--------------------------------- |
+| all      | 默认值，每一次show都更新内容和事件   |
+| content  | 第一次show初始化全部，之后只更新内容 |
+| event    | 第一次show初始化全部，之后只更新事件 |
+| once     | 仅在第一次show初始化全部            |
 
 
 ### 三、配置项说明

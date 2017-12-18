@@ -4,19 +4,19 @@
 ### 一、用法
 1. 在wxml中引入模板
    ``` html
-   <import src="../../component/uploader/uploader.wxml"/>
+   <import src="../../components/uploader/uploader.wxml"/>
    <!-- data参数必须以uploader为key -->
    <template is="uploader" data="{{uploader}}"/>
    ```
 
 2. 在wxss中引入样式
    ```scss
-   @import '../../component/uploader/uploader.wxss';
+   @import '../../components/uploader/uploader.wxss';
    ```
 
 3. 在js中引入和使用
     ```javascript
-    import Uploader from '../../component/uploader/uploader'
+    import Uploader from '../../components/uploader/uploader'
     const uploader = new Uploader(this, (resFilesPath) => {
       // 注意：该处的处理逻辑请自己实现
       const files = _this.data.uploader.files || []

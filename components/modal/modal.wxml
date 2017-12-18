@@ -10,8 +10,8 @@
                 </block>
             </view>
             <view class="modal_btns" bindtap="modalControl">
-                <view wx:if="{{cancelText}}" class="modal_btn cancel" id="modal_cancel">{{cancelText}}</view>
-                <view class="modal_btn confirm" id="modal_confirm">{{confirmText ? confirmText:'确认'}}</view>
+                <view wx:if="{{cancelText}}" class="modal_btn cancel" id="modalCancel">{{cancelText}}</view>
+                <view class="modal_btn confirm" id="modalConfirm">{{confirmText ? confirmText:'确认'}}</view>
             </view>
         </view>
     </view>

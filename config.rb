@@ -34,19 +34,19 @@ on_stylesheet_saved do |file|
         # index
         if filename === "index"
             txt = File.open(file, "a")
-            txt.puts "@import '../../component/picker/picker.wxss';"
+            txt.puts "@import '../../components/picker/picker.wxss';"
             txt.close
         end
         # modal
         if filename === "egModal"
             txt = File.open(file, "a")
-            txt.puts "@import '../../component/modal/modal.wxss';"
+            txt.puts "@import '../../components/modal/modal.wxss';"
             txt.close
         end
         # uploader
         if filename === "egUploader"
                     txt = File.open(file, "a")
-                    txt.puts "@import '../../component/uploader/uploader.wxss';"
+                    txt.puts "@import '../../components/uploader/uploader.wxss';"
                     txt.close
                 end
         File.rename(file, File::dirname(file) + "/" + filename + ".wxss")

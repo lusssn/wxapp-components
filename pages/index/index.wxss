@@ -1,2 +1,2 @@
 /**index.wxss**/
-@import '../../component/picker/picker.wxss';
+@import '../../components/picker/picker.wxss';

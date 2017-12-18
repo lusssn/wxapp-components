@@ -1,4 +1,4 @@
-import Picker from '../../component/picker/picker'
+import Picker from '../../components/picker/picker'
 
 let picker
 
@@ -11,6 +11,10 @@ Page({
       columns: [['昨天', '今天', '明天'], [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20], ['苹果', '香蕉', '芒果']], // 列，二维数组，单列支持一维数组
       confirm: _pickerConfirm // 点击确认的回调方法，第一个参数为选择的项
     })
+  },
+  onShowModal (e) {
+    console.log("in index.js")
+    console.log(e)
   },
   toModal () {
     wx.navigateTo({
