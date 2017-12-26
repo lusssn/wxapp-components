@@ -82,16 +82,16 @@ DropSelect 下拉列表组件说明
     ```
     
 ### 二、组件方法说明
-1. constructor
-   方法说明：构造方法，初始化组件数据
+1. constructor  
+   方法说明：构造方法，初始化组件数据  
    场景：通过关键字new创建一个实例时调用。
         
    P 1：Object scope  
-   说明：使用组件的Page的作用域。
+   说明：使用组件的Page的作用域。  
    P 2：Json config  
    说明：配置项。
    
-2. getSelected
+2. getSelected  
    方法说明：返回选择内容函数
    
 ### 三、配置项说明
@@ -114,8 +114,8 @@ DropSelect 下拉列表组件说明
 | `active`    | `Number`      |N        |默认选择的列，默认：第一列 |    |
 | afterSelect | Function      |N        |选择后的回调             |         |   
 
-- 单列options项说明
-若是single模式，options为对象；
+- 单列options项说明  
+若是single模式，options为对象；  
 若是multi模式，options为对象数组。
 
 | Param Name | Type        |Required |Description             | e.g.     |
