@@ -1,5 +1,7 @@
 ## 自定义滚动选择组件说明
-更新时间：2017-10-25
+更新时间：2017-12-26
+
+<img src="http://oyd1mgz9y.bkt.clouddn.com/wxapp-components-picker.png" width="30%">
 
 ### 一、用法
 1. 在wxml中引入模板

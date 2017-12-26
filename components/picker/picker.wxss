@@ -21,7 +21,7 @@
 /* line 14, picker.scss */
 .picker .head {
   font-size: 17px;
-  color: #D7D7D7;
+  color: #212121;
   display: flex;
   justify-content: space-between;
   align-items: center;

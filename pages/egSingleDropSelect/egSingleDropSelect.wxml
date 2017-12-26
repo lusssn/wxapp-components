@@ -1,0 +1,4 @@
+<import src="../../components/dropSelect/dropSelect.wxml"/>
+
+<template wx:if="{{dropSelect}}" is="dropSelect" data="{{...dropSelect}}"/>
+<view class="result">您的选择是：{{result || '-'}}</view>

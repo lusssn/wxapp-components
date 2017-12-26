@@ -13,7 +13,7 @@ Page({
       cancel: function () {
         // 取消回调
       }
-    }, 'content')
+    })
   },
   bindModalHighlight () {
     Modal.show(this, {
@@ -23,7 +23,7 @@ Page({
       confirm: function () {
         // 确定回调
       }
-    }, 'content')
+    })
   },
   bindModalOneButton () {
     Modal.show(this, {
@@ -32,6 +32,6 @@ Page({
       confirm: function () {
         // 确定回调
       }
-    }, 'content')
+    })
   }
 })

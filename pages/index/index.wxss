@@ -1,2 +1,5 @@
-/**index.wxss**/
+/* line 1, index.scss */
+button {
+  margin: 5px;
+}
 @import '../../components/picker/picker.wxss';

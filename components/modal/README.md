@@ -1,5 +1,7 @@
 ## 自定义弹窗组件说明
-更新时间：2017-12-18
+更新时间：2017-12-26
+
+<img src="http://oyd1mgz9y.bkt.clouddn.com/wxapp-components-modal-title.png" width="30%"> <img src="http://oyd1mgz9y.bkt.clouddn.com/wxapp-components-modal-heightlight.png" width="30%"> <img src="http://oyd1mgz9y.bkt.clouddn.com/wxapp-components-modal-one-btn.png" width="30%">
 
 ### 一、用法
 1. 在wxml中引入模板

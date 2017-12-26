@@ -12,7 +12,7 @@
 		background-color: rgba(black, .6);
 	}
 	.head {
-		@include font(17px, $gray-5f);
+		@include font(17px, $text-color);
 
 		display: flex;
 		justify-content: space-between;

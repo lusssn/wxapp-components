@@ -45,10 +45,22 @@ on_stylesheet_saved do |file|
         end
         # uploader
         if filename === "egUploader"
-                    txt = File.open(file, "a")
-                    txt.puts "@import '../../components/uploader/uploader.wxss';"
-                    txt.close
-                end
+            txt = File.open(file, "a")
+            txt.puts "@import '../../components/uploader/uploader.wxss';"
+            txt.close
+        end
+        # uploader
+        if filename === "egSingleDropSelect"
+            txt = File.open(file, "a")
+            txt.puts "@import '../../components/dropSelect/dropSelect.wxss';"
+            txt.close
+        end
+        # uploader
+        if filename === "egMultiDropSelect"
+            txt = File.open(file, "a")
+            txt.puts "@import '../../components/dropSelect/dropSelect.wxss';"
+            txt.close
+        end
         File.rename(file, File::dirname(file) + "/" + filename + ".wxss")
     end
 end

@@ -1,0 +1,9 @@
+/* color system */
+/* semantic */
+/* line 4, egMultiDropSelect.scss */
+.result {
+  font-size: 16px;
+  color: #4A4A4A;
+  padding: 25px;
+}
+@import '../../components/dropSelect/dropSelect.wxss';

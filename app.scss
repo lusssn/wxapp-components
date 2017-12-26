@@ -1,6 +1,8 @@
+@import "scss/_variables";
+
+page {
+	background-color: $bg-color;
+}
 .container {
 	padding: 20px;
-}
-button {
-	margin-bottom: 20px;
 }

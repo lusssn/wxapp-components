@@ -2,12 +2,14 @@
   "pages":[
     "pages/index/index",
     "pages/egModal/egModal",
-    "pages/egUploader/egUploader"
+    "pages/egUploader/egUploader",
+    "pages/egSingleDropSelect/egSingleDropSelect",
+    "pages/egMultiDropSelect/egMultiDropSelect"
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#4A4A4A",
     "navigationBarTitleText": "Examples",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle":"white"
   }
 }

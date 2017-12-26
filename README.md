@@ -1,7 +1,8 @@
 # wxapp-components
-Update Time: 2017-12-07
+Update Time: 2017-12-26
 
 目录：
-- Modal
-- Picker
-- Uploader
+- Modal 自定义弹框
+- Picker 自定义滚动选择菜单
+- Uploader 图片上传组件
+- DropSelect 下拉选择菜单
