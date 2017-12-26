@@ -1,9 +1,9 @@
-DropSelect 下拉列表组件说明
+DropSelect 下拉列表组件说明  
 更新时间：2017-12-26
 
 <img src="http://oyd1mgz9y.bkt.clouddn.com/drop_select_single.png" width="30%"> <img src="http://oyd1mgz9y.bkt.clouddn.com/drop_select_multi.png" width="30%">
 
-该组件有两个类型：多排（multi）和 单排（single）。   
+该组件有两个类型：单排（single） 和 多排（multi）。 
 
 ### 一、用法
 1. 在wxml中引入模板
@@ -96,6 +96,7 @@ DropSelect 下拉列表组件说明
    
 ### 三、配置项说明
 - 单列config说明
+
 | Param Name  | Type            |Required |Description                         | e.g.     |
 |:----------- |:--------------- |:-------:|:---------------------------------- |:-------- |
 | `title`     | String          |N        |菜单label，默认：'请选择'              | |
@@ -105,6 +106,7 @@ DropSelect 下拉列表组件说明
 | afterSelect | Function        |N        |选择后的回调                           |         |   
 
 - 多列config说明
+
 | Param Name  | Type          |Required |Description           | e.g.     |
 |:----------- |:------------- |:-------:|:-------------------- |:-------- |
 | mode        | String        |`Y`      |菜单模式：multi         |     |
@@ -115,6 +117,7 @@ DropSelect 下拉列表组件说明
 - 单列options项说明
 若是single模式，options为对象；
 若是multi模式，options为对象数组。
+
 | Param Name | Type        |Required |Description             | e.g.     |
 |:---------- |:----------- |:-------:|:---------------------- |:-------- |
 | name       | string      |N        |作为菜单的id标记          | |
