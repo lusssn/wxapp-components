@@ -6,7 +6,8 @@
     "wx": false,
     "getApp": false,
     "Page": false,
-    "App": false
+    "App": false,
+    "Component": false
   },
   "rules": {
     "no-extend-native": 0

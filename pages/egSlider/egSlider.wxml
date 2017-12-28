@@ -1,0 +1,4 @@
+<view class="container">
+    <cpnt-slider bindsliderchange="bindSliderChange"></cpnt-slider>
+</view>
+<view class="result">您的选择是：{{result || '-'}}</view>
