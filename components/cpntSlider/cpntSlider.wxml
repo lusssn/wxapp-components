@@ -1,6 +1,6 @@
-<view class="cpnt-slider">
+<view class="cpnt-slider cpnt-slider-{{direction}}">
     <movable-area class="cpnt-slider-track" id="cpnt-slider-track">
-        <movable-view class="cpnt-slider-control" id="cpnt-slider-control" direction="horizontal"
-                      x="{{distance}}" bindtouchend="onChange"/>
+        <movable-view class="cpnt-slider-control" id="cpnt-slider-control" direction="{{direction}}"
+                      x="{{distance}}" y="{{distance}}" bindtouchend="onChange"/>
     </movable-area>
 </view>

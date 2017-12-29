@@ -3,22 +3,39 @@
 @import "../../scss/_border";
 
 .cpnt-slider {
-	margin: 10px 0;
 	display: flex;
 	align-items: center;
-	width: 100%;
-	height: 6px;
 	border-radius: 3px;
 	background-color: $gray-c7;
-
-	&-track {
+	&-control {
+		border-radius: 6px;
+		background: $theme-color;
+	}
+}
+.cpnt-slider-horizontal {
+	width: 100%;
+	height: 6px;
+	margin: 10px 0;
+	.cpnt-slider-track {
 		width: 100%;
 		height: 26px;
 	}
-	&-control {
+	.cpnt-slider-control {
 		width: 12px;
 		height: 100%;
-		border-radius: 6px;
-		background: $theme-color;
+	}
+}
+.cpnt-slider-vertical {
+	flex-direction: column;
+	width: 6px;
+	height: 200px;
+	margin: 0 10px;
+	.cpnt-slider-track {
+		width: 26px;
+		height: 100%;
+	}
+	.cpnt-slider-control {
+		width: 100%;
+		height: 12px;
 	}
 }
