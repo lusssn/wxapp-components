@@ -3,11 +3,11 @@
 @import "../../scss/_mixins";
 
 .picker {
-	@include bfc(fixed, null);
+	@include bfc(fixed);
 
 	z-index: 3;
 	@at-root .picker_mask {
-		@include bfc($top: null);
+		@include bfc();
 
 		background-color: rgba(black, .6);
 	}

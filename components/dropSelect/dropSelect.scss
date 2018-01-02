@@ -6,7 +6,7 @@
 .drop_select {
 	display: flex;
 	@at-root .drop_select_bg {
-		@include bfc(fixed, null);
+		@include bfc(fixed);
 
 		z-index: 3;
 		background-color: rgba(black, .6);

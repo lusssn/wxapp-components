@@ -1,0 +1,12 @@
+<scroll-view class="swiper-menu" scroll-x="true" scroll-with-animation="true" scroll-left="{{scrollLeft}}"
+             bindtouchstart="onTouchStart" bindtouchend="onTouchEnd">
+    <view class="swiper-menu-part swiper-menu-menu" id="menu" style="width: {{menuWidth}}px">
+        <slot name="menu" />
+    </view>
+    <scroll-view scroll-y="true" class="swiper-menu-part swiper-menu-content">
+        <slot name="content" />
+    </scroll-view>
+    <view class="swiper-menu-btn-switch{{scrollLeft ? '' : ' unfold'}}" style="left: {{menuWidth - scrollLeft}}px;" catchtap="onSwitchMenu">
+        <view class="line" /><view class="line" /><view class="line" />
+    </view>
+</scroll-view>

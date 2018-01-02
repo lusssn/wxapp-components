@@ -30,7 +30,7 @@
 // 创建一个块级格式化上下文
 // @param $position: absolute，fixed
 // @param $zIndex: 层级，默认无
-@mixin bfc($position: absolute, $top: "", $right: "", $bottom: "", $left: "") {
+@mixin bfc($position: absolute, $top: null, $right: "", $bottom: "", $left: "") {
 	position: $position;
 	@if type_of($top) == "null" {
 		top: 0;

@@ -1,0 +1,63 @@
+@charset "UTF-8";
+@import "../../scss/_variables";
+@import "../../scss/_mixins";
+
+.swiper-menu {
+	@include bfc(fixed);
+
+	white-space: nowrap;
+	&-part {
+		position: relative;
+		display: inline-block;
+		height: 100%;
+		vertical-align: top;
+	}
+	&-menu {
+		overflow-x: visible;
+		overflow-y: scroll;
+		background-color: $theme-color;
+	}
+	&-content {
+		width: 100%;
+		background-color: $gray-c7;
+	}
+	// 状态转换按钮
+	&-btn-switch {
+		@include bfc(fixed, 0);
+
+		z-index: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 40px;
+		height: 40px;
+		transition: left .3s ease-out;
+		background-color: $theme-color;
+		.line {
+			width: 28px;
+			height: 3px;
+			margin: 0 auto 7px;
+			transition: all .3s ease-in-out;
+			transition-delay: .4s;
+			transform-origin: left;
+			background-color: white;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		// 展开状态
+		&.unfold {
+			.line {
+				&:first-child {
+					transform: translateX(4px) rotate(45deg);
+				}
+				&:nth-child(2) {
+					opacity: 0;
+				}
+				&:last-child {
+					transform: translateX(4px) rotate(-45deg);
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "可滑动的菜单组件",
+  "usingComponents": {
+    "cpnt-swiper-menu": "../../components/cpntSwiperMenu/cpntSwiperMenu"
+  }
+}

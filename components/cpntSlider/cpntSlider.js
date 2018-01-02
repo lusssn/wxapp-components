@@ -31,9 +31,9 @@ Component({
     })
     // 初始化slider的滑动范围和滑块移动距离
     _this.data.$track.exec((trackRects) => {
-      const trackRect = trackRects.shift()
+      const trackRect = trackRects[0]
       _this.data.$control.exec((controlRects) => {
-        const controlRect = controlRects.shift()
+        const controlRect = controlRects[0]
         let range
         if (_this.data.direction === 'vertical') {
           range = trackRect.height - controlRect.height
@@ -72,7 +72,7 @@ Component({
     onChange () {
       const _this = this
       _this.data.$control.exec((controlRects) => {
-        const controlRect = controlRects.shift()
+        const controlRect = controlRects[0]
         _this.setData({
           distance: _this._getDistance(controlRect)
         })

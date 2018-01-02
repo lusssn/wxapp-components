@@ -3,12 +3,12 @@
 @import "../../scss/_border";
 
 .modal {
-	@include bfc(fixed, null);
+	@include bfc(fixed);
 
 	z-index: 10;
 	text-align: center;
 	.modal_mask {
-		@include bfc($top: null);
+		@include bfc();
 
 		background-color: rgba(black, .5);
 	}
