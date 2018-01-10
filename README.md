@@ -8,3 +8,4 @@ Update Time: 2018-01-02
 - [DropSelect 下拉选择菜单](https://github.com/lusssn/wxapp-components/tree/examples/components/dropSelect)
 - [Slider 自定义滑动器](https://github.com/lusssn/wxapp-components/tree/examples/components/cpntSlider)
 - [SwiperMenu 可滑动菜单](https://github.com/lusssn/wxapp-components/tree/examples/components/cpntSwiperMenu)
+- [Radio 单选组件](https://github.com/lusssn/wxapp-components/tree/examples/components/cpntRadio)

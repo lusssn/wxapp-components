@@ -8,6 +8,7 @@
   <button type="primary" plain="true" size="mini" bindtap="toPage" data-page="egMultiDropSelect">多列DropSelect</button>
   <button type="primary" plain="true" size="mini" bindtap="toPage" data-page="egSlider">Slider</button>
   <button type="primary" plain="true" size="mini" bindtap="toPage" data-page="egSwiperMenu">Swiper Menu</button>
+  <button type="primary" plain="true" size="mini" bindtap="toPage" data-page="egRadio">Radio</button>
 </view>
 
 <template wx:if="{{picker}}" is="picker" data="{{...picker}}"/>

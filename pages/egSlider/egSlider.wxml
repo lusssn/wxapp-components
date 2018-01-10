@@ -2,6 +2,7 @@
     <cpnt-slider value="23" bindchange="bindChangeH"></cpnt-slider>
 </view>
 <view class="result">您的选择是：{{horizontal || '-'}}</view>
+
 <view class="container">
     <cpnt-slider bindchange="bindChangeV" direction="vertical"></cpnt-slider>
 </view>

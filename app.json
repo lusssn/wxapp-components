@@ -6,7 +6,8 @@
     "pages/egSingleDropSelect/egSingleDropSelect",
     "pages/egMultiDropSelect/egMultiDropSelect",
     "pages/egSlider/egSlider",
-    "pages/egSwiperMenu/egSwiperMenu"
+    "pages/egSwiperMenu/egSwiperMenu",
+    "pages/egRadio/egRadio"
   ],
   "window":{
     "backgroundTextStyle":"light",
