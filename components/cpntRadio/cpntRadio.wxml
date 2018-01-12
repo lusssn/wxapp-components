@@ -1,7 +1,8 @@
 <view class="cpnt-radio">
     <view wx:for="{{data}}" wx:key="id" class="cpnt-radio-item"
           data-index="{{index}}" bindtap="onRadioChange">
-        <icon hidden="{{selectedIndex !== index}}" class="cpnt-radio-icon" type="success" size="23" color="#EF4945"/>
+        <icon hidden="{{(multiple && !item.isSelected) || (!multiple && selectedIndex !== index)}}"
+              class="cpnt-radio-icon" type="success" size="23" color="#EF4945"/>
         <text>{{item.name}}</text>
     </view>
 </view>

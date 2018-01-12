@@ -1,4 +1,7 @@
 <view class="container">
     <cpnt-radio data="{{radioItems}}" bindchange="bindRadioChange" selected-index="2"></cpnt-radio>
-    <view class="result">您的选择是：{{result || '-'}}</view>
+    <view class="result">您的选择是：{{normal || '-'}}</view>
+
+    <cpnt-radio data="{{radioItems}}" bindchange="bindMultiChange" multiple="true"></cpnt-radio>
+    <view class="result">您的选择是：{{multiple || '-'}}</view>
 </view>

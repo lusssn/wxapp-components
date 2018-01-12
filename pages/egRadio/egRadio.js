@@ -8,7 +8,13 @@ Page({
   bindRadioChange (e) {
     const self = this
     self.setData({
-      result: JSON.stringify(e.detail.value)
+      normal: JSON.stringify(e.detail.value)
+    })
+  },
+  bindMultiChange (e) {
+    const self = this
+    self.setData({
+      multiple: JSON.stringify(e.detail.value)
     })
   }
 })
