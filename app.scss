@@ -1,8 +1,16 @@
 @import "scss/_variables";
+@import "scss/_mixins";
 
 page {
 	background-color: $bg-color;
 }
+
 .container {
 	padding: 20px;
+}
+
+.result {
+	@include font(16px, $gray-4a);
+
+	padding: 25px;
 }

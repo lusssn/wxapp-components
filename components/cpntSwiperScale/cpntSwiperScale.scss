@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+.swiper-scale {
+	width: 100%;
+	overflow: hidden;
+	&-inner {
+		position: relative;
+	}
+	&-wrap {
+		position: absolute;
+		white-space: nowrap;
+	}
+	&-item {
+		display: inline-block;
+		box-sizing: border-box;
+		transition: transform linear .4s;
+		border-radius: 8px;
+		background-color: white;
+		box-shadow: 0 1px 3px 0 rgba(black, .1);
+	}
+}

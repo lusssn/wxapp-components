@@ -1,0 +1,23 @@
+/* line 3, cpntSwiperScale.scss */
+.swiper-scale {
+  width: 100%;
+  overflow: hidden;
+}
+/* line 6, cpntSwiperScale.scss */
+.swiper-scale-inner {
+  position: relative;
+}
+/* line 9, cpntSwiperScale.scss */
+.swiper-scale-wrap {
+  position: absolute;
+  white-space: nowrap;
+}
+/* line 13, cpntSwiperScale.scss */
+.swiper-scale-item {
+  display: inline-block;
+  box-sizing: border-box;
+  transition: transform linear .4s;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}

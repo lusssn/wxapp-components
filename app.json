@@ -7,6 +7,7 @@
     "pages/egMultiDropSelect/egMultiDropSelect",
     "pages/egSlider/egSlider",
     "pages/egSwiperMenu/egSwiperMenu",
+    "pages/egSwiperScale/egSwiperScale",
     "pages/egRadio/egRadio"
   ],
   "window":{

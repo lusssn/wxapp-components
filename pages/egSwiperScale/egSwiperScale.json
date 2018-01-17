@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "缩放切换Swiper",
+  "usingComponents": {
+    "cpnt-swiper-scale": "../../components/cpntSwiperScale/cpntSwiperScale"
+  }
+}

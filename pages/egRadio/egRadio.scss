@@ -1,8 +1,0 @@
-@import "../../scss/_variables";
-@import "../../scss/_mixins";
-
-.result {
-	@include font(16px, $gray-4a);
-
-	padding: 25px;
-}
