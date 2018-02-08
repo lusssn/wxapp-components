@@ -1,5 +1,5 @@
 /* line 1, egModal.scss */
-button {
+.container button {
   margin: 5px;
 }
 @import '../../components/modal/modal.wxss';

@@ -1,15 +1,22 @@
 <import src="../../components/picker/picker.wxml"/>
 
 <view class="container">
-  <button type="primary" plain="true" size="mini" bindtap="toPage" data-page="egModal">Modal</button>
-  <button type="primary" plain="true" size="mini" bindtap="bindShowPicker">Picker</button>
-  <button type="primary" plain="true" size="mini" bindtap="toPage" data-page="egUploader">Uploader</button>
-  <button type="primary" plain="true" size="mini" bindtap="toPage" data-page="egSingleDropSelect">单列DropSelect</button>
-  <button type="primary" plain="true" size="mini" bindtap="toPage" data-page="egMultiDropSelect">多列DropSelect</button>
-  <button type="primary" plain="true" size="mini" bindtap="toPage" data-page="egSlider">Slider</button>
-  <button type="primary" plain="true" size="mini" bindtap="toPage" data-page="egSwiperMenu">Swiper Menu</button>
-  <button type="primary" plain="true" size="mini" bindtap="toPage" data-page="egRadio">Radio</button>
-  <button type="primary" plain="true" size="mini" bindtap="toPage" data-page="egSwiperScale">Swiper Scale</button>
+  <view>
+    <button type="primary" plain="true" size="mini" bindtap="toPage" data-page="egModal">Modal</button>
+    <button type="primary" plain="true" size="mini" bindtap="bindShowPicker">Picker</button>
+    <button type="primary" plain="true" size="mini" bindtap="toPage" data-page="egUploader">Uploader</button>
+  </view>
+  <view>
+    <button type="primary" plain="true" size="mini" bindtap="toPage" data-page="egSingleDropSelect">单列DropSelect</button>
+    <button type="primary" plain="true" size="mini" bindtap="toPage" data-page="egMultiDropSelect">多列DropSelect</button>
+  </view>
+  <view>
+    <button type="primary" plain="true" size="mini" bindtap="toPage" data-page="egSlider">Slider</button>
+    <button type="primary" plain="true" size="mini" bindtap="toPage" data-page="egRadio">Radio</button>
+  </view>
+  <view>
+    <button type="primary" plain="true" size="mini" bindtap="toPage" data-page="egSwiperMenu">Swiper Menu</button>
+    <button type="primary" plain="true" size="mini" bindtap="toPage" data-page="egSwiperScale">Swiper Scale</button>
+  </view>
 </view>
-
 <template wx:if="{{picker}}" is="picker" data="{{...picker}}"/>

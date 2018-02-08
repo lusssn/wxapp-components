@@ -1,50 +1,49 @@
 @import "../../scss/_variables";
 @import "../../scss/_mixins";
-@import "../../scss/_border";
 
 .modal {
-	@include bfc(fixed);
+	@include bfc(fixed, null);
 
 	z-index: 10;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	text-align: center;
-	.modal_mask {
-		@include bfc();
-
-		background-color: rgba(black, .5);
-	}
-	.modal_view {
-		position: relative;
-		overflow: hidden;
+	background-color: rgba(black, .5);
+	&_view {
 		width: 280px;
-		margin: 45% auto 0;
+		margin-top: -50px;
 		padding-top: 30px;
 		border-radius: 8px;
 		background-color: white;
 	}
-	.modal_title {
+	&_title {
 		@include font(18px, black);
 
 		margin-top: -10px;
 		padding-bottom: 10px;
 	}
-	.modal_content {
+	&_content {
 		@include font(16px, $text-color, 22px);
 
-		padding: 0 35px 20px;
-		.link_color {
-			color: $link-color;
-		}
+		padding: 0 30px 20px;
 	}
-	.modal_btns {
+	&_btns {
 		@include borderPoint5("t");
 
 		display: flex;
-		font-size: 18px;
-		line-height: 25px;
 	}
-	.modal_btn {
+	&_btn {
+		@include font(18px, 25px);
+
 		flex: 1;
-		padding: 12px 0 13px;
+		box-sizing: border-box;
+		height: 50px;
+		border-radius: 0;
+		background-color: transparent;
+		&::after {
+			border: none;
+		}
 		&:active {
 			background-color: rgba(black, .1);
 		}
@@ -55,6 +54,10 @@
 			@include borderPoint5("r");
 
 			color: $gray-a0;
+
+			&:after {
+				left: auto;
+			}
 		}
 	}
 }

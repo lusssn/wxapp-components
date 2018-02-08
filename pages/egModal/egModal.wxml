@@ -3,5 +3,6 @@
     <button type="primary" plain="true" size="mini" bindtap="bindModalTitle">有title的弹窗</button>
     <button type="primary" plain="true" size="mini" bindtap="bindModalHighlight">文字高亮的弹窗</button>
     <button type="primary" plain="true" size="mini" bindtap="bindModalOneButton">只有一个按钮的弹窗</button>
+    <button type="primary" plain="true" size="mini" bindtap="bindModalShare">可直接分享的弹窗</button>
 </view>
 <template wx:if="{{modal}}" is="modal" data="{{...modal}}"/>

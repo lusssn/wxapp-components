@@ -33,5 +33,16 @@ Page({
         // 确定回调
       }
     })
+  },
+  bindModalShare () {
+    Modal.show(this, {
+      content: '分享10086给朋友吗？',
+      cancelText: '不了',
+      confirmText: '分享',
+      confirmShare: true,
+      confirm: function () {
+        // 确定回调
+      }
+    })
   }
 })

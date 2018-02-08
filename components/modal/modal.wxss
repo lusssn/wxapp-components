@@ -1,6 +1,6 @@
 /* color system */
 /* semantic */
-/* line 5, modal.scss */
+/* line 4, modal.scss */
 .modal {
   position: fixed;
   top: 0;
@@ -8,73 +8,89 @@
   bottom: 0;
   left: 0;
   z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-}
-/* line 10, modal.scss */
-.modal .modal_mask {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
   background-color: rgba(0, 0, 0, 0.5);
 }
-/* line 15, modal.scss */
-.modal .modal_view {
-  position: relative;
-  overflow: hidden;
+/* line 13, modal.scss */
+.modal_view {
   width: 280px;
-  margin: 45% auto 0;
+  margin-top: -50px;
   padding-top: 30px;
   border-radius: 8px;
   background-color: white;
 }
-/* line 24, modal.scss */
-.modal .modal_title {
+/* line 20, modal.scss */
+.modal_title {
   font-size: 18px;
   color: black;
   margin-top: -10px;
   padding-bottom: 10px;
 }
-/* line 30, modal.scss */
-.modal .modal_content {
+/* line 26, modal.scss */
+.modal_content {
   font-size: 16px;
   color: #212121;
   line-height: 22px;
-  padding: 0 35px 20px;
+  padding: 0 30px 20px;
 }
-/* line 34, modal.scss */
-.modal .modal_content .link_color {
-  color: #477DB2;
-}
-/* line 38, modal.scss */
-.modal .modal_btns {
-  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACAQMAAABIeJ9nAAAABlBMVEUAAADX19f7b47VAAAAAXRSTlMAQObYZgAAAAxJREFUCNdjOMDAAAACRADBQq93fQAAAABJRU5ErkJggg==");
-  background-repeat: repeat-x;
-  background-position: top;
-  background-size: 1px;
+/* line 31, modal.scss */
+.modal_btns {
+  position: relative;
   display: flex;
+}
+/* line 37, ../../scss/_border.scss */
+.modal_btns::before {
+  position: absolute;
+  content: "";
+  background-color: #D7D7D7;
+  right: 0;
+  left: 0;
+  height: 1px;
+  transform: scale(1, 0.5);
+  top: 0;
+}
+/* line 36, modal.scss */
+.modal_btn {
   font-size: 18px;
-  line-height: 25px;
-}
-/* line 45, modal.scss */
-.modal .modal_btn {
+  color: 25px;
   flex: 1;
-  padding: 12px 0 13px;
+  box-sizing: border-box;
+  height: 50px;
+  border-radius: 0;
+  background-color: transparent;
 }
-/* line 48, modal.scss */
-.modal .modal_btn:active {
+/* line 44, modal.scss */
+.modal_btn::after {
+  border: none;
+}
+/* line 47, modal.scss */
+.modal_btn:active {
   background-color: rgba(0, 0, 0, 0.1);
 }
-/* line 51, modal.scss */
-.modal .modal_btn.confirm {
+/* line 50, modal.scss */
+.modal_btn.confirm {
   color: #EF4945;
 }
-/* line 54, modal.scss */
-.modal .modal_btn.cancel {
-  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACAQMAAABIeJ9nAAAABlBMVEUAAADX19f7b47VAAAAAXRSTlMAQObYZgAAAAxJREFUCNdjcGBwAAABBACBuS4d8AAAAABJRU5ErkJggg==");
-  background-repeat: repeat-y;
-  background-position: right;
-  background-size: 1px;
+/* line 53, modal.scss */
+.modal_btn.cancel {
+  position: relative;
   color: #A0A0A0;
+}
+/* line 61, ../../scss/_border.scss */
+.modal_btn.cancel::after {
+  position: absolute;
+  content: "";
+  background-color: #D7D7D7;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  transform: scale(0.5, 1);
+  right: 0;
+}
+/* line 58, modal.scss */
+.modal_btn.cancel:after {
+  left: auto;
 }

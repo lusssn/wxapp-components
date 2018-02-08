@@ -1,6 +1,5 @@
 <template name="modal">
     <view hidden="{{hide}}" class="modal">
-        <view class="modal_mask"/>
         <view class="modal_view">
             <view wx:if="{{title}}" class="modal_title">{{title}}</view>
             <view wx:if="{{content}}" class="modal_content">
@@ -10,8 +9,14 @@
                 </block>
             </view>
             <view class="modal_btns" bindtap="modalControl">
-                <view wx:if="{{cancelText}}" class="modal_btn cancel" id="modalCancel">{{cancelText}}</view>
-                <view class="modal_btn confirm" id="modalConfirm">{{confirmText ? confirmText:'确认'}}</view>
+                <!-- 此处不可在open-type中写分支，否则更新modal数据时，open-type不会二次更新 -->
+                <block wx:if="{{cancelText}}">
+                    <button wx:if="{{cancelShare}}" class="modal_btn cancel" id="modal_cancel" open-type="share">{{cancelText}}</button>
+                    <button wx:else class="modal_btn cancel" id="modal_cancel">{{cancelText}}</button>
+                </block>
+                <!-- 此处不可在open-type中写分支，否则更新modal数据时，open-type不会二次更新 -->
+                <button wx:if="{{confirmShare}}" class="modal_btn confirm" id="modal_confirm" open-type="share">{{confirmText ? confirmText:'确认'}}</button>
+                <button wx:else class="modal_btn confirm" id="modal_confirm">{{confirmText ? confirmText:'确认'}}</button>
             </view>
         </view>
     </view>

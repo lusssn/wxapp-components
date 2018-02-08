@@ -1,10 +1,10 @@
 'use strict'
 /**
  * configType有效值：all（default），content，event，once
- * 1. all：默认值，每一次show都更新内容和事件
- * 2. content：第一次show初始化全部，之后只更新内容
- * 3. event：第一次show初始化全部，之后只更新事件
- * 4. once：仅在第一次show初始化全部
+ * all：每一次show都更新内容和事件
+ * content：第一次show初始化全部，之后只更新内容
+ * event：第一次show初始化全部，之后只更新事件
+ * once：仅在第一次show初始化全部
  */
 let CONFIG = {}
 let CONFIRM_CALLBACK
@@ -63,7 +63,9 @@ function _initModal (scope, config) {
     title: config.title,
     content: [],
     cancelText: config.cancelText,
+    cancelShare: config.cancelShare,
     confirmText: config.confirmText,
+    confirmShare: config.confirmShare,
     hide: false
   }
 
