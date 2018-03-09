@@ -1,5 +1,4 @@
 'use strict'
-let INIT_FOLD
 /**
  * 根据key获取value
  * @param id
@@ -23,33 +22,36 @@ const _getName = function (id, data) {
  */
 const _multiSwitchTab = function (e) {
   const scope = this
+  const dropSelectData = scope.data.dropSelect
   const numSelectIndex = e.currentTarget.dataset.select_index
-  const arrIsFold = scope.data.dropSelect.isFold
-  const numOptionsLength = scope.data.dropSelect.data[numSelectIndex].options.length
-  let current
+  const arrIsFold = dropSelectData.isFold
+  const numOptionsLength = dropSelectData.data[numSelectIndex].options.length
 
-  for (let i = 0; i < arrIsFold.length; i++) {
-    if (numSelectIndex === i && arrIsFold[i] === true) {
-      // 点无选项当前FOLD为此项
-      if (!numOptionsLength) {
-        INIT_FOLD = numSelectIndex
+  // 点击项判断，与current相同则判断isFold
+  if (numSelectIndex === dropSelectData.current) {
+    for (let i = 0; i < arrIsFold.length; i++) {
+      if (numSelectIndex === i && arrIsFold[i]) {
+        // 无选项直接置为true（收起），否则展开（false）
+        arrIsFold[i] = !numOptionsLength
+      } else {
+        arrIsFold[i] = true
       }
-      current = numSelectIndex
-      // 无选项直接置为true（收起），否则展开（false）
-      arrIsFold[i] = !numOptionsLength
-    } else {
+    }
+    scope.setData({
+      'dropSelect.isFold': arrIsFold
+    })
+  } else {
+    for (let i = 0; i < arrIsFold.length; i++) {
       arrIsFold[i] = true
     }
-  }
-
-  scope.setData({
-    'dropSelect.current': current === undefined ? INIT_FOLD : current,
-    'dropSelect.isFold': arrIsFold
-  })
-
-  if (!numOptionsLength && typeof scope.afterDropSelectCallback === 'function') {
-    const selected = _getSelected.call(scope)
-    scope.afterDropSelectCallback(selected)
+    scope.setData({
+      'dropSelect.current': numSelectIndex,
+      'dropSelect.isFold': arrIsFold
+    })
+    if (typeof scope.afterDropSelectCallback === 'function') {
+      const selected = _getSelected.call(scope)
+      scope.afterDropSelectCallback(selected)
+    }
   }
 }
 
@@ -73,7 +75,6 @@ const _multiSelect = function (e) {
       break
     }
   }
-  INIT_FOLD = numSelectIndex
   scope.setData({
     ['dropSelect.data[' + numSelectIndex + '].current']: current,
     ['dropSelect.isFold[' + numSelectIndex + ']']: true
@@ -93,8 +94,7 @@ const _multiFold = function () {
   const scope = this
   const numCurrent = scope.data.dropSelect.current
   scope.setData({
-    ['dropSelect.isFold[' + numCurrent + ']']: true,
-    'dropSelect.current': INIT_FOLD
+    ['dropSelect.isFold[' + numCurrent + ']']: true
   })
 }
 
@@ -178,7 +178,6 @@ export default class DropSelect {
   init (config) {
     const scope = this.scope
     const {mode, options, active} = config
-    INIT_FOLD = 0
 
     const dropSelectConfig = {
       mode: mode
