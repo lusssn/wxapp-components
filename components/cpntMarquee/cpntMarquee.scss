@@ -1,0 +1,15 @@
+@import "../../scss/_variables";
+@import "../../scss/_mixins";
+
+.cpnt-marquee {
+	overflow: hidden;
+	height: 50px;
+	background: rgba($theme-color, .15);
+	&-item {
+		@include font(14px, rgba($theme-color, .73), 20px);
+
+		display: flex;
+		justify-content: space-between;
+		padding: 15px 25px;
+	}
+}

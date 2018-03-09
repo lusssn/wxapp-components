@@ -1,5 +1,5 @@
 # wxapp-components
-Update Time: 2018-01-17
+Update Time: 2018-03-09
 
 目录：
 - [Modal 自定义弹框](https://github.com/lusssn/wxapp-components/tree/examples/components/modal)
@@ -10,3 +10,4 @@ Update Time: 2018-01-17
 - [SwiperMenu 可滑动菜单](https://github.com/lusssn/wxapp-components/tree/examples/components/cpntSwiperMenu)
 - [Radio 单选、多选组件](https://github.com/lusssn/wxapp-components/tree/examples/components/cpntRadio)
 - [SwiperScale 缩放切换组件](https://github.com/lusssn/wxapp-components/tree/examples/components/cpntSwiperScale)
+- [Marquee 文字滚动组件](https://github.com/lusssn/wxapp-components/tree/examples/components/cpntMarquee)

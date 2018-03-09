@@ -1,0 +1,7 @@
+<view class="cpnt-marquee">
+    <view id="cnpt-marquee" class="cpnt-marquee-inner" animation="{{marqueeAnimation}}">
+        <view wx:for="{{dataset}}" wx:key="{{index}}" class="cpnt-marquee-item">
+            <text>{{item.nickname}}领取了 {{item.amount}}元 红包</text>
+        </view>
+    </view>
+</view>

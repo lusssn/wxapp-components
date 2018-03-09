@@ -18,5 +18,8 @@
     <button type="primary" plain="true" size="mini" bindtap="toPage" data-page="egSwiperMenu">Swiper Menu</button>
     <button type="primary" plain="true" size="mini" bindtap="toPage" data-page="egSwiperScale">Swiper Scale</button>
   </view>
+  <view>
+    <button type="primary" plain="true" size="mini" bindtap="toPage" data-page="egMarquee">Marquee</button>
+  </view>
 </view>
 <template wx:if="{{picker}}" is="picker" data="{{...picker}}"/>

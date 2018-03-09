@@ -1,5 +1,5 @@
 ## DropSelect 下拉列表组件说明  
-更新时间：2017-12-26
+更新时间：2018-03-09
 
 <img src="http://oyd1mgz9y.bkt.clouddn.com/drop_select_single.png" width="30%"> <img src="http://oyd1mgz9y.bkt.clouddn.com/drop_select_multi.png" width="30%">
 

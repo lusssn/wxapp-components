@@ -8,7 +8,8 @@
     "pages/egSlider/egSlider",
     "pages/egSwiperMenu/egSwiperMenu",
     "pages/egSwiperScale/egSwiperScale",
-    "pages/egRadio/egRadio"
+    "pages/egRadio/egRadio",
+    "pages/egMarquee/egMarquee"
   ],
   "window":{
     "backgroundTextStyle":"light",
