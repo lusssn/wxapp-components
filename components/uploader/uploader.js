@@ -1,6 +1,6 @@
 'use strict'
 export default class Uploader {
-  constructor(scope, success, limit = 0) {
+  constructor (scope, success, limit = 0) {
     const _this = this
     if (!scope || !scope.onLoad) {
       return
@@ -20,14 +20,12 @@ export default class Uploader {
   }
 }
 
-function _previewImage(e) {
+function _previewImage (e) {
   const scope = this
   const numImgIndex = e.target.dataset.ii
   const arrFiles = scope.data.uploader.files
 
-  if (isNaN(numImgIndex)) {
-    return
-  }
+  if (isNaN(numImgIndex)) return
 
   wx.previewImage({
     current: arrFiles[numImgIndex],
@@ -35,7 +33,7 @@ function _previewImage(e) {
   })
 }
 
-function _deleteUploaderImg(e) {
+function _deleteUploaderImg (e) {
   const scope = this
   const numImgIndex = e.currentTarget.dataset.ii
   const arrFiles = scope.data.uploader.files
@@ -47,7 +45,7 @@ function _deleteUploaderImg(e) {
   })
 }
 
-function _chooseImg(size) {
+function _chooseImg (size) {
   return new Promise((resolve) => {
     wx.chooseImage({
       count: size || 9,
@@ -59,7 +57,7 @@ function _chooseImg(size) {
   })
 }
 
-function _uploadImg(filePath) {
+function _uploadImg (filePath) {
   wx.showToast({
     title: '上传中',
     duration: 20000
@@ -69,7 +67,7 @@ function _uploadImg(filePath) {
       url: '', // 上传地址
       name: 'file',
       filePath: filePath,
-      success: (uploadRes) => {
+      success (uploadRes) {
         if (!uploadRes || !uploadRes.data) {
           wx.showToast({
             title: '上传失败'
@@ -83,7 +81,7 @@ function _uploadImg(filePath) {
         })
         resolve(res)
       },
-      fail: () => {
+      fail () {
         wx.showToast({
           title: '上传失败'
         })
@@ -92,23 +90,23 @@ function _uploadImg(filePath) {
   })
 }
 
-function _addImg() {
+function _addImg () {
   const _this = this
   const scope = _this.scope
   _chooseImg(_calculateChooseSize(scope.data.uploader)).then((arrFilePaths) => {
-    // 为了示例注释下面代码
-    /*for (const filePath of arrFilePaths) {
-      // 单张上传图片，成功后在sccuess中将接口返回的图片路径更新到uploader.files里
-      _uploadImg(filePath).then((res) => {
-        typeof _this.success === 'function' && _this.success(res)
-      })
-    }*/
-    // 为了示例，上面注释代码改为下面代码
+    // A. 为了示例注释下面代码，实际使用时应该启用
+    // for (const filePath of arrFilePaths) {
+    //   // 单张上传图片，成功后在sccuess中将接口返回的图片路径更新到uploader.files里
+    //   _uploadImg(filePath).then((res) => {
+    //     typeof _this.success === 'function' && _this.success(res)
+    //   })
+    // }
+    // B. 为了示例，上面注释代码改为下面代码，实际使用时应该去掉
     typeof _this.success === 'function' && _this.success(arrFilePaths)
   })
 }
 
-function _calculateChooseSize(uploader) {
+function _calculateChooseSize (uploader) {
   const limit = uploader.limit
   const currentLength = (uploader.files && uploader.files.length) || 0
 
