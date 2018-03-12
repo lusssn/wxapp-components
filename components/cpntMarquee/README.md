@@ -1,6 +1,8 @@
 ## 文字滚动组件说明
 更新时间：2018-03-09
 
+<img src="http://oyd1mgz9y.bkt.clouddn.com/wxapp-components-marquee.gif" width="30%">
+
 ### 一、用法
 1. 在page.json中设置
     ```json
@@ -16,7 +18,7 @@
     <cpnt-marquee dataset="{{marqueeList}}"/>
     ```
 
-3. 在js中获取滑动选择的值
+3. 在js中设置组件的值
     ```javascript
     Page({
       data: {
