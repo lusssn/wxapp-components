@@ -3,15 +3,15 @@
 /* line 4, cpntMarquee.scss */
 .cpnt-marquee {
   overflow: hidden;
-  height: 50px;
   background: rgba(239, 73, 69, 0.15);
 }
-/* line 8, cpntMarquee.scss */
+/* line 7, cpntMarquee.scss */
 .cpnt-marquee-item {
   font-size: 14px;
   color: rgba(239, 73, 69, 0.73);
   line-height: 20px;
   display: flex;
   justify-content: space-between;
+  box-sizing: border-box;
   padding: 15px 25px;
 }

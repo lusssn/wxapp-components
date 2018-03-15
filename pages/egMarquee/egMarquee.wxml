@@ -1,1 +1,1 @@
-<cpnt-marquee dataset="{{marqueeList}}"/>
+<cpnt-marquee item-height="50" height="150" dataset="{{marqueeList}}"/>

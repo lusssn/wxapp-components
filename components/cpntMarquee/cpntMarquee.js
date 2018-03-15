@@ -7,13 +7,23 @@ Component({
     // 滚动器高度
     height: {
       type: Number, value: 50
+    },
+    // 一条内容的高度
+    itemHeight: {
+      type: Number, value: 50
     }
   },
   data: {},
   attached () {
-    const dataset = this.data.dataset
-    dataset.push(dataset[0])
-    this.setData({
+    const _this = this
+    const dataset = _this.data.dataset
+    const limit = Math.floor(_this.data.height / _this.data.itemHeight)
+    let i = 0
+    while (i < limit) {
+      dataset.push(dataset[i])
+      i++
+    }
+    _this.setData({
       dataset
     })
   },
@@ -38,7 +48,7 @@ Component({
               marqueeAnimation: _this.animation.translateY(0).step({duration: 0}).export()
             })
           }
-          scrollTop = _this.data.height * scrollIndex
+          scrollTop = _this.data.itemHeight * scrollIndex
           // 延迟处理，避免与reset的时候渲染冲突
           setTimeout(() => {
             _this.setData({
