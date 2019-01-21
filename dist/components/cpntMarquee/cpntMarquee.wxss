@@ -1,0 +1,20 @@
+/* color system */
+/* semantic */
+/* color system */
+/* semantic */
+/* color system */
+/* semantic */
+.cpnt-marquee {
+  overflow: hidden;
+  background: rgba(239, 73, 69, 0.15);
+}
+
+.cpnt-marquee-item {
+  font-size: 14px;
+  color: rgba(239, 73, 69, 0.73);
+  line-height: 20px;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 15px 25px;
+}

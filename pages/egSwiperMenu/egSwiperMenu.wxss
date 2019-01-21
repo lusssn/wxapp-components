@@ -1,5 +1,0 @@
-/* line 1, egSwiperMenu.scss */
-.menu, .content {
-  color: white;
-  text-align: center;
-}

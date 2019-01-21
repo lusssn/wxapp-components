@@ -1,0 +1,139 @@
+/* color system */
+/* semantic */
+/* color system */
+/* semantic */
+/* color system */
+/* semantic */
+/* color system */
+/* semantic */
+.drop_select {
+  display: flex;
+}
+
+.drop_select_bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.multi_select .drop_select_body {
+  display: flex;
+  flex: 1;
+}
+
+.drop_select_body {
+  font-size: 16px;
+  color: #A0A0A0;
+  line-height: 50px;
+  position: relative;
+  z-index: 4;
+  width: 100%;
+  background-color: white;
+}
+
+.multi_item {
+  position: relative;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  height: 50px;
+  text-align: center;
+  border-bottom: 2px solid white;
+}
+
+.multi_item.selected {
+  border-color: #477DB2;
+}
+
+.multi_item.selected .title {
+  color: #477DB2;
+}
+
+.multi_item.selected .arrow_down {
+  background: url("data:image/svg+xml;utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M13.333 8l-1.867 1.867 6.133 6.133-6.133 6.133 1.867 1.867 8-8z' fill='#477DB2'/></svg>") center no-repeat;
+  width: 20px;
+  height: 20px;
+  background-size: 20px;
+}
+
+.multi_item .arrow_down {
+  background: url("data:image/svg+xml;utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M13.333 8l-1.867 1.867 6.133 6.133-6.133 6.133 1.867 1.867 8-8z' fill='#A0A0A0'/></svg>") center no-repeat;
+  width: 20px;
+  height: 20px;
+  background-size: 20px;
+  transform: rotate(90deg);
+}
+
+.multi_item .up {
+  transform: rotate(270deg);
+}
+
+.multi_options {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  left: 0;
+  z-index: 3;
+  background-color: white;
+}
+
+.multi_options.selected {
+  display: block;
+}
+
+.multi_options .option:active {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.single_select {
+  position: relative;
+}
+
+.single_select .title {
+  display: flex;
+  align-items: center;
+  padding-right: 15px;
+  padding-left: 25px;
+  color: black;
+}
+
+.single_select .title .label {
+  min-width: 48px;
+  padding-right: 20px;
+}
+
+.single_select .desc {
+  flex: 1;
+  color: #477DB2;
+}
+
+.single_options {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  left: 0;
+  z-index: 4;
+  background-color: white;
+}
+
+.single_options .option:active {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.single_select .arrow_down {
+  background: url("data:image/svg+xml;utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M13.333 8l-1.867 1.867 6.133 6.133-6.133 6.133 1.867 1.867 8-8z' fill='#C7C7C7'/></svg>") center no-repeat;
+  width: 20px;
+  height: 20px;
+  background-size: 20px;
+  transform: rotate(90deg);
+}
+
+.single_select .up {
+  transform: rotate(270deg);
+}

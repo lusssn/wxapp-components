@@ -1,0 +1,45 @@
+@charset "UTF-8";
+@import "../../assets/scss/_variables";
+@import "../../assets/scss/_mixins";
+
+.picker {
+	@include bfc(fixed);
+
+	z-index: 3;
+	@at-root .picker_mask {
+		@include bfc();
+
+		background-color: rgba(black, .6);
+	}
+	.head {
+		@include font(17px, $text-color);
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-top: 12px;
+	}
+	.btn {
+		padding: 13px 15px;
+	}
+	.back {
+		color: $gray-a0;
+	}
+	.confirm {
+		color: $link-color;
+	}
+	@at-root .picker_content {
+		@include bfc(absolute, "", 0, 0, 0);
+
+		background-color: white;
+	}
+	@at-root .picker_frame {
+		height: 42px;
+		font-size: 10px;
+	}
+	@at-root .picker_view {
+		@include font(20px, $text-color, 42px);
+
+		text-align: center;
+	}
+}

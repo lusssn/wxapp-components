@@ -1,0 +1,7 @@
+<view class="cpnt-marquee" style="height: {{height}}px">
+    <view id="cnpt-marquee" class="cpnt-marquee-inner" animation="{{marqueeAnimation}}">
+        <view wx:for="{{dataset}}" wx:key="{{index}}" class="cpnt-marquee-item" style="height: {{itemHeight}}px">
+            <text>{{item}}</text>
+        </view>
+    </view>
+</view>

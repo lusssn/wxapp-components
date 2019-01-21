@@ -1,0 +1,2 @@
+<cpnt-swiper-scale image-urls="{{imageUrls}}" bindchange="bindChange"/>
+<view class="result">您的选择是：{{result === undefined ? 1 : result}}</view>

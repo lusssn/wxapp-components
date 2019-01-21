@@ -1,0 +1,17 @@
+<template name="picker">
+    <view hidden="{{hide}}" class="picker">
+        <view class="picker_mask"/>
+        <view class="picker_content">
+            <view class="head">
+                <view class="btn back" bindtap="pickerBack">返回</view>
+                请选择{{title}}
+                <view class="btn confirm" bindtap="pickerConfirm">确定</view>
+            </view>
+            <picker-view wx:if="{{!hide}}" indicator-class="picker_frame" style="height: 168px;" value="{{active}}" bindchange="pickerChange">
+                <picker-view-column wx:for="{{columns}}" wx:for-item="column" wx:key="{{index}}">
+                    <view wx:for="{{column}}" wx:key="{{index}}" class="picker_view">{{item}}</view>
+                </picker-view-column>
+            </picker-view>
+        </view>
+    </view>
+</template>

@@ -1,0 +1,19 @@
+/* color system */
+/* semantic */
+/* color system */
+/* semantic */
+/* color system */
+/* semantic */
+page {
+  background-color: #FAFAFA;
+}
+
+.container {
+  padding: 20px;
+}
+
+.result {
+  font-size: 16px;
+  color: #4A4A4A;
+  padding: 25px;
+}

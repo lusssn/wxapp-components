@@ -1,0 +1,64 @@
+/* color system */
+/* semantic */
+/* color system */
+/* semantic */
+/* color system */
+/* semantic */
+.picker {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+}
+
+.picker_mask {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.picker .head {
+  font-size: 17px;
+  color: #212121;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+}
+
+.picker .btn {
+  padding: 13px 15px;
+}
+
+.picker .back {
+  color: #A0A0A0;
+}
+
+.picker .confirm {
+  color: #477DB2;
+}
+
+.picker_content {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+}
+
+.picker_frame {
+  height: 42px;
+  font-size: 10px;
+}
+
+.picker_view {
+  font-size: 20px;
+  color: #212121;
+  line-height: 42px;
+  text-align: center;
+}

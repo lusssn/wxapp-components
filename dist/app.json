@@ -1,0 +1,20 @@
+{
+  "pages": [
+    "pages/index/index",    
+    "pages/egModal/egModal",
+    "pages/egUploader/egUploader",
+    "pages/egSingleDropSelect/egSingleDropSelect",
+    "pages/egMultiDropSelect/egMultiDropSelect",
+    "pages/egSlider/egSlider",
+    "pages/egSwiperMenu/egSwiperMenu",
+    "pages/egSwiperScale/egSwiperScale",
+    "pages/egRadio/egRadio",
+    "pages/egMarquee/egMarquee"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#4A4A4A",
+    "navigationBarTitleText": "Examples",
+    "navigationBarTextStyle": "white"
+  }
+}

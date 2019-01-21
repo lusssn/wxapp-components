@@ -1,0 +1,50 @@
+/* color system */
+/* semantic */
+/* color system */
+/* semantic */
+/* color system */
+/* semantic */
+.cpnt-slider {
+  display: flex;
+  align-items: center;
+  border-radius: 3px;
+  background-color: #C7C7C7;
+}
+
+.cpnt-slider-control {
+  border-radius: 6px;
+  background: #EF4945;
+}
+
+.cpnt-slider-horizontal {
+  width: 100%;
+  height: 6px;
+  margin: 10px 0;
+}
+
+.cpnt-slider-horizontal .cpnt-slider-track {
+  width: 100%;
+  height: 26px;
+}
+
+.cpnt-slider-horizontal .cpnt-slider-control {
+  width: 12px;
+  height: 100%;
+}
+
+.cpnt-slider-vertical {
+  flex-direction: column;
+  width: 6px;
+  height: 200px;
+  margin: 0 10px;
+}
+
+.cpnt-slider-vertical .cpnt-slider-track {
+  width: 26px;
+  height: 100%;
+}
+
+.cpnt-slider-vertical .cpnt-slider-control {
+  width: 100%;
+  height: 12px;
+}

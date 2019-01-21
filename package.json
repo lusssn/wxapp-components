@@ -1,0 +1,19 @@
+{
+  "name": "wxapp-components",
+  "version": "1.0.0",
+  "description": "微信小程序组件",
+  "author": "Chris Lu",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "gulp start",
+    "build": "gulp build"
+  },
+  "devDependencies": {
+    "fs-extra": "^7.0.1",
+    "gulp": "^4.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.0.2"
+  }
+}

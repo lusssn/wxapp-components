@@ -1,4 +1,3 @@
-# phpstrom cache directory
+node_modules/
+npm-debug.log
 .idea
-# Weixin DevTools config file
-project.config.json

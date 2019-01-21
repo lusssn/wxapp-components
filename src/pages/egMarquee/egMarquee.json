@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "文字滚动组件",
+  "usingComponents": {
+    "cpnt-marquee": "../../components/cpntMarquee/cpntMarquee"
+  }
+}

@@ -1,0 +1,35 @@
+<template name="dropSelect">
+	<view class="drop_select {{mode + '_select'}}">
+		<block wx:if="{{mode === 'multi'}}">
+			<view hidden="{{isFold[0] && isFold[1]}}" bindtap="multiFold" class="drop_select_bg"/>
+			<view class="drop_select_body">
+				<view wx:for="{{data}}" wx:for-index="select_index" wx:key="{{select_index}}"
+					  data-select_index="{{select_index}}"
+					  class="multi_item{{current === select_index ? ' selected':''}}" id="{{item.name}}" bindtap="multiSwitch">
+					<text class="title">{{item.current.name}}</text>
+					<icon wx:if="{{item.options.length}}" class="arrow_down{{isFold[select_index] ? '' : ' up'}}"/>
+					<view wx:if="{{item.options.length}}" hidden="{{isFold[select_index]}}" data-select_index="{{select_index}}"
+						  class="multi_options" catchtap="multiOption" >
+						<view wx:for="{{item.options}}" wx:for-item="option" wx:key="id" data-option_id="{{option.id}}"
+							  class="option{{item.current.id === option.id ? ' link_color' : ''}}">{{option.name}}</view>
+					</view>
+				</view>
+			</view>
+		</block>
+		<block wx:if="{{mode === 'single'}}">
+			<view hidden="{{isFold}}" class="drop_select_bg" bindtap="singleFold"/>
+			<view class="drop_select_body" bindtap="singleSwitch">
+				<view class="title">
+					<text class="label">{{title ? title : '请选择'}}</text>
+					<text class="desc">{{current.name}}</text>
+					<icon class="arrow_down{{isFold ? '' : ' up' }}"/>
+				</view>
+				<view hidden="{{isFold}}" class="single_options" catchtap="singleOption" >
+					<view wx:for="{{data.options}}" wx:for-item="option" wx:key="id" data-option_id="{{option.id}}"
+						  style="padding-left: {{(title ? title.length * 16 : 48) + 45}}px"
+						  class="option{{current.id === option.id ? ' link_color' : ''}}">{{option.name}}</view>
+				</view>
+			</view>
+		</block>
+	</view>
+</template>

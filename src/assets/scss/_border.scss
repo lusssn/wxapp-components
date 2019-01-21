@@ -1,0 +1,103 @@
+@charset "UTF-8";
+@import "variables";
+
+$border: (
+	"border_dash_top": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAACAQMAAABfWg+uAAAABlBMVEUAAACgoKAEzvuuAAAAAXRSTlMAQObYZgAAAAxJREFUCNdj+MDAAAAC1ADxIaL8aQAAAABJRU5ErkJggg==",
+	"border_dash_left": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAAIAQMAAADp47wBAAAABlBMVEUAAACgoKAEzvuuAAAAAXRSTlMAQObYZgAAAA1JREFUCNdjgIEGCAQACBACAZx/cL0AAAAASUVORK5CYII=",
+	"border_dash_right": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAAIAQMAAADp47wBAAAABlBMVEUAAACgoKAEzvuuAAAAAXRSTlMAQObYZgAAAA1JREFUCNdjcIBCKAAADBABAcb8m24AAAAASUVORK5CYII=",
+	"border_dash_bottom": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAACAQMAAABfWg+uAAAABlBMVEUAAACgoKAEzvuuAAAAAXRSTlMAQObYZgAAAAxJREFUCNdjYGDgBwAAEwAQwf5oRwAAAABJRU5ErkJggg=="
+);
+
+
+@mixin common($color) {
+	position: absolute;
+	content: "";
+	background-color: $color;
+}
+
+@mixin horizontal($color) {
+	@include common($color);
+
+	right: 0;
+	left: 0;
+	height: 1px;
+	transform: scale(1, .5);
+}
+
+@mixin vertical($color) {
+	@include common($color);
+
+	top: 0;
+	bottom: 0;
+	width: 1px;
+	transform: scale(.5, 1);
+}
+
+@mixin top($color) {
+	&::before {
+		@include horizontal($color);
+
+		top: 0;
+	}
+}
+
+@mixin bottom($color) {
+	&::after {
+		@include horizontal($color);
+
+		bottom: 0;
+	}
+}
+
+@mixin left($color) {
+	&::before {
+		@include vertical($color);
+
+		left: 0;
+	}
+}
+
+@mixin right($color) {
+	&::after {
+		@include vertical($color);
+
+		right: 0;
+	}
+}
+
+@mixin borderPoint5($direction: "t", $color: $line-color, $parentPosition: relative) {
+	@if type-of($parentPosition) == "string" {
+		position: $parentPosition;
+	}
+	// 边框方向判断
+	@if $direction == "a" {
+		@error "不支持 0.5px边框使用'a'模式！";
+	} @else if $direction == "tb" {
+		@include top($color);
+		@include bottom($color);
+	} @else if $direction == "t" {
+		@include top($color);
+	} @else if $direction == "b" {
+		@include bottom($color);
+	} @else if $direction == "lr" {
+		@include left($color);
+		@include right($color);
+	} @else if $direction == "l" {
+		@include left($color);
+	} @else if $direction == "r" {
+		@include right($color);
+	} @else {
+		@error "0.5px边框$direction: `#{$direction}` 不在('a', 'tb', 't', 'b', 'lr', 'l', 'r')里。";
+	}
+}
+
+@mixin borderDash() {
+	padding: 1px;
+	background-image: url(map-get($border, "border_dash_top")),
+	url(map-get($border, "border_dash_right")),
+	url(map-get($border, "border_dash_bottom")),
+	url(map-get($border, "border_dash_left"));
+	background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
+	background-position: top, right, bottom, left;
+	background-size: 4px 1px, 1px 4px, 4px 1px, 1px 4px;
+}

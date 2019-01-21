@@ -1,0 +1,63 @@
+@import "../../assets/scss/_variables";
+@import "../../assets/scss/_mixins";
+
+.modal {
+	@include bfc(fixed, null);
+
+	z-index: 10;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: rgba(black, .5);
+	&_view {
+		width: 280px;
+		margin-top: -50px;
+		padding-top: 30px;
+		border-radius: 8px;
+		background-color: white;
+	}
+	&_title {
+		@include font(18px, black);
+
+		margin-top: -10px;
+		padding-bottom: 10px;
+	}
+	&_content {
+		@include font(16px, $text-color, 22px);
+
+		padding: 0 30px 20px;
+	}
+	&_btns {
+		@include borderPoint5("t");
+
+		display: flex;
+	}
+	&_btn {
+		@include font(18px, 25px);
+
+		flex: 1;
+		box-sizing: border-box;
+		height: 50px;
+		border-radius: 0;
+		background-color: transparent;
+		&::after {
+			border: none;
+		}
+		&:active {
+			background-color: rgba(black, .1);
+		}
+		&.confirm {
+			color: $theme-color;
+		}
+		&.cancel {
+			@include borderPoint5("r");
+
+			color: $gray-a0;
+
+			&:after {
+				left: auto;
+			}
+		}
+	}
+}

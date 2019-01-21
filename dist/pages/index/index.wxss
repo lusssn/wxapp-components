@@ -1,0 +1,4 @@
+@import '../../components/picker/picker.wxss'; 
+button {
+  margin: 5px;
+}

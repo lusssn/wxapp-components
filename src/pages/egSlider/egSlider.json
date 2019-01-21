@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "滑动器组件",
+  "usingComponents": {
+    "cpnt-slider": "../../components/cpntSlider/cpntSlider"
+  }
+}

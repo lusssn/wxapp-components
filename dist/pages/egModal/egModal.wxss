@@ -1,0 +1,4 @@
+@import '../../components/modal/modal.wxss'; 
+.container button {
+  margin: 5px;
+}

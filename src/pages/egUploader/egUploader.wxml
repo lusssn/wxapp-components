@@ -1,0 +1,4 @@
+<import src="../../components/uploader/uploader.wxml"/>
+<view class="container">
+    <template is="uploader" data="{{uploader}}"/>
+</view>

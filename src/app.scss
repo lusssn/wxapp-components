@@ -1,0 +1,16 @@
+@import "assets/scss/_variables";
+@import "assets/scss/_mixins";
+
+page {
+	background-color: $bg-color;
+}
+
+.container {
+	padding: 20px;
+}
+
+.result {
+	@include font(16px, $gray-4a);
+
+	padding: 25px;
+}

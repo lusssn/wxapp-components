@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "自定义单选组件",
+  "usingComponents": {
+    "cpnt-radio": "../../components/cpntRadio/cpntRadio"
+  }
+}

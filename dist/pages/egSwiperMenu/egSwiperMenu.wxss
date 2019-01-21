@@ -1,0 +1,4 @@
+.menu, .content {
+  color: white;
+  text-align: center;
+}

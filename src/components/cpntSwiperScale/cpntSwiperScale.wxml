@@ -1,0 +1,22 @@
+<view class="swiper-scale">
+    <view class="swiper-scale-inner" bindtouchstart="onTouchStart" bindtouchend="onTouchEnd"
+          style="height: {{cardHeight}}px; left: {{margin - cardWidth}}rpx;" animation="{{animationData}}">
+        <view class="swiper-scale-wrap" style="left: {{cardWidth * -2}}rpx;">
+            <image src="{{imageUrls[amount-2]}}" mode="aspectFill"
+                   class="swiper-scale-item" style="{{baseStyle}} transform: scale({{scale}});" />
+            <image src="{{imageUrls[amount-1]}}" mode="aspectFill"
+                   class="swiper-scale-item" style="{{baseStyle}} transform: scale({{current === -1 ? 1 : scale}});" />
+        </view>
+        <view class="swiper-scale-wrap">
+            <image wx:for="{{imageUrls}}" wx:key="*this" src="{{item}}" mode="aspectFill"
+                   class="swiper-scale-item"
+                   style="{{baseStyle}} transform: scale({{(amount + current) % amount === index ? 1 : scale}});" />
+        </view>
+        <view class="swiper-scale-wrap" style="left: {{cardWidth * amount}}rpx;">
+            <image src="{{imageUrls[0]}}" mode="aspectFill"
+                   class="swiper-scale-item" style="{{baseStyle}} transform: scale({{current === amount ? 1 : scale}});" />
+            <image src="{{imageUrls[1]}}" mode="aspectFill"
+                   class="swiper-scale-item" style="{{baseStyle}} transform: scale({{scale}});" />
+        </view>
+    </view>
+</view>

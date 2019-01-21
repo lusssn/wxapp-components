@@ -1,0 +1,45 @@
+@charset "UTF-8";
+@import "variables";
+
+// 说明：svg以背景图方式填入
+// 1. 在$svg中配置svg映射，name: value
+// 2. name命名规定使用下划线连接的方式
+// 3. value是svg的属性d的值
+// 4. 默认svg字符串结尾为$svg_suffix，开头为$svg_prefix
+//    拼接插入fill属性改变其颜色
+$svg: (
+	"arrow_right": "M13.333 8l-1.867 1.867 6.133 6.133-6.133 6.133 1.867 1.867 8-8z",
+	"plus": "M14.4 14.4h-9.6v3.2h9.6v9.6h3.2v-9.6h9.6v-3.2h-9.6v-9.6h-3.2v9.6z",
+	"close": "M25.6 8.16l-1.92-1.76-7.68 7.68-7.68-7.68-1.92 1.76 7.68 7.84-7.68 7.68 1.92 1.92 7.68-7.84 7.68 7.84 1.92-1.92-7.68-7.68z"
+);
+
+// 自定义svg的icon
+// @param $name: 名称，必填
+// @param $size: 大小，选填，默认20px
+// @param $color: 颜色，选填，默认#5f5f5f
+$svg_prefix: "data:image/svg+xml;utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='";
+$svg_suffix: "'/></svg>";
+@mixin svg($name, $size: 20px, $color: $gray-5f) {
+	$icon: map_get($svg, $name);
+	@if $icon != null {
+		@if type_of($size) == 'color' {
+			$color: $size;
+		} @else if type_of($color == 'color') {
+			$color: $color;
+		} @else {
+			@error "svg：#{$color} 参数错误";
+		}
+		background: url($svg_prefix + $icon + "' fill='" + $color + $svg_suffix) center no-repeat;
+		@if type_of($size) == 'number' {
+			width: $size;
+			height: $size;
+			background-size: $size;
+		} @else {
+			width: 20px;
+			height: 20px;
+			background-size: 20px;
+		}
+	} @else {
+		@error "svg：#{$name} 未注册";
+	}
+}
